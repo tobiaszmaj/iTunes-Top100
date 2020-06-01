@@ -1,0 +1,12 @@
+.navBar {
+    display: flex;
+    flex-direction: row;
+
+    .navButton {
+        padding: 20px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
