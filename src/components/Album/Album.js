@@ -52,11 +52,11 @@ class Album extends Component {
                         </div>
                         <div className={`body__links ${this.state.isExpanded ? 'is-expanded' : ''}`}>
                             <div className={'links__link'}>
-                                <a href={this.props.album.link.attributes.href} target={'_blank'} rel={'noopener noreferrer'}>Check out on
+                                <a className={'links__link--a'} href={this.props.album.link.attributes.href} target={'_blank'} rel={'noopener noreferrer'}>Check out on
                                     iTunes</a>
                             </div>
                             <div className={'links__link'}>
-                                <a href={this.props.album.category.attributes.scheme} target={'_blank'} rel={'noopener noreferrer'}>More artists in
+                                <a className={'links__link--a'} href={this.props.album.category.attributes.scheme} target={'_blank'} rel={'noopener noreferrer'}>More artists in
                                 this
                                     category</a>
                             </div>

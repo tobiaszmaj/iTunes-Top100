@@ -8,35 +8,73 @@
     width: 100%;
     background-color: $navBgColor;
     position: fixed;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
 
-    .navBar__btn {
-        padding: 30px;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: $navFontColor;
+    .navBar__wrapper {
+        margin-left: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
 
-        &:hover {
-            cursor: pointer;
-            color: $secondaryColor;
+        .navBar__logo {
+            min-width: 120px;
+            display: flex;
+            flex-direction: column;
+            color: $navFontColor;
+            padding: 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 24px;
+            font-weight: 900;
+            line-height: 0.8;
+
+            .logo__top100 {
+                font-size: 18px;
+                letter-spacing: 5px;
+            }
+        }
+
+        .navBar__items {
+
+            .items__btn {
+                padding: 30px;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $navFontColor;
+
+                &:hover {
+                    cursor: pointer;
+                    color: $secondaryColor;
+                }
+            }
         }
     }
 
-    .navBar__logo {
-        min-width: 100px;
-        display: flex;
-        flex-direction: column;
-        color: $navFontColor;
+    .navBar__hamburger {
         padding: 20px;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 24px;
-        font-weight: 900;
-        margin-left: 50px;
-        line-height: 0.8;
+        font-size: 28px;
+        color: #FFFFFF;
+        background: transparent;
+        border: none;
+        display: none;
+    }
 
-        .logo__top100 {
-            font-size: 18px;
-            letter-spacing: 5px;
+    @media (max-width: 690px) {
+        .navBar__hamburger {
+            display: block;
+        }
+
+        .navBar__logo {
+            margin-left: 0;
+        }
+
+        .items__btn {
+            display: none;
+        }
+
+        .navBar__wrapper {
+            margin: 0;
         }
     }
 }

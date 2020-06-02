@@ -9,7 +9,6 @@ class TopAlbums extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: [],
             search: ''
         }
     }
@@ -42,7 +41,7 @@ class TopAlbums extends Component {
                         onChange={this.handleChange} />
                     <FontAwesomeIcon icon={'search'} className={'searchBox__icon'} />
                 </form>
-                <ul>
+                <ul className={'topAlbums__list'}>
                     {filteredAlbums.map((element, index) => {
                         return <Album key={index} album={element} />
                     })}
