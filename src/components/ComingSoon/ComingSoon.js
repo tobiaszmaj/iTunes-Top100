@@ -4,7 +4,7 @@ import './ComingSoon.scss';
 class ComingSoon extends Component {
     render() {
         return (
-            <div>Coming soon</div>
+            <div className={'comingSoon'}>Coming soon</div>
         )
     }
 }

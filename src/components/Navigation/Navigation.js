@@ -6,7 +6,7 @@ class Navigation extends Component {
     render() {
         //Mapping through navigation elements passed in props
         const navButtons = this.props.navItems.map((element, index) => {
-            return <NavLink key={index} className={'navButton'} activeStyle={{ color: 'dodgerblue' }} to={element.link}>{element.item}</NavLink>
+            return <NavLink key={index} className={'navButton'} activeStyle={{ color: '#1E90FF' }} to={element.link}>{element.item}</NavLink>
         });
 
         return (

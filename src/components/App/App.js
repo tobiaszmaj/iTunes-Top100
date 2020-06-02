@@ -4,6 +4,10 @@ import { BrowserRouter, Redirect, Switch, Route } from "react-router-dom";
 import Navigation from "../Navigation/Navigation";
 import ComingSoon from "../ComingSoon/ComingSoon";
 import TopAlbums from "../TopAlbums/TopAlbums";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faAngleDown);
 
 class App extends Component {
     render() {

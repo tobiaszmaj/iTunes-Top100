@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Album.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Album extends Component {
     constructor(props) {
@@ -25,10 +26,13 @@ class Album extends Component {
         return (
             <li className={`panel ${this.state.isExpanded ? 'is-expanded' : ''}`}>
                 <div className="panel-header" onClick={(e) => this.handleToggle(e)}>
-                    <span>{this.props.album.position}. </span>
-                    <img src={this.props.album['im:image'][0].label} alt="" />
-                    <h2>{this.props.album['im:name'].label}</h2>
-                    <h3> by {this.props.album['im:artist'].label}</h3>
+                    <span className={'albumPosition'}>{this.props.album.position}</span>
+                    <img className={'albumImg'} src={this.props.album['im:image'][2].label} alt="" />
+                    <div className="albumData">
+                        <h2 className={'albumName'}>{this.props.album['im:name'].label}</h2>
+                        <h3 className={'albumArtist'}> by {this.props.album['im:artist'].label}</h3>
+                    </div>
+                    <FontAwesomeIcon className={'albumArrow'} icon={'angle-down'} />
                 </div>
                 <div className="panel-collapse" style={{ height: currentHeight }}>
 

@@ -32,7 +32,7 @@ class TopAlbums extends Component {
         //Creating a new array based on the searched keywords
         const filteredAlbums = albums.filter(
             (album) => {
-                return album['im:name'].label.toLowerCase().includes(this.state.search.toLocaleLowerCase()) || album['im:artist'].label.toLowerCase().includes(this.state.search.toLocaleLowerCase())
+                return album['im:name'].label.toLowerCase().includes(this.state.search.toLowerCase()) || album['im:artist'].label.toLowerCase().includes(this.state.search.toLowerCase())
             }
         );
         console.log(this.state.data);
