@@ -30,7 +30,7 @@ class Album extends Component {
                     <img className={'albumImg'} src={this.props.album['im:image'][2].label} alt="" />
                     <div className="albumData">
                         <h2 className={'albumName'}>{this.props.album['im:name'].label}</h2>
-                        <h3 className={'albumArtist'}> by {this.props.album['im:artist'].label}</h3>
+                        <h3 className={'albumArtist'}>{this.props.album['im:artist'].label}</h3>
                     </div>
                     <FontAwesomeIcon className={'albumArrow'} icon={'angle-down'} />
                 </div>
