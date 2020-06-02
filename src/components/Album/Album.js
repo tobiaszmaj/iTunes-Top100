@@ -19,12 +19,12 @@ class Album extends Component {
     };
 
     render() {
-        //Setting the current height of element
+        //Setting the current height of the element
         const currentHeight = this.state.isExpanded ? this.state.height : 0;
 
         return (
-            <li className={`panel ${this.state.isExpanded ? 'is-expanded' : ''}`} onClick={(e) => this.handleToggle(e)}>
-                <div className="panel-header">
+            <li className={`panel ${this.state.isExpanded ? 'is-expanded' : ''}`}>
+                <div className="panel-header" onClick={(e) => this.handleToggle(e)}>
                     <span>{this.props.album.position}. </span>
                     <img src={this.props.album['im:image'][0].label} alt="" />
                     <h2>{this.props.album['im:name'].label}</h2>
@@ -33,8 +33,25 @@ class Album extends Component {
                 <div className="panel-collapse" style={{ height: currentHeight }}>
 
                     <div className="panel-body" ref="inner">
-                        Collapsed things Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, porro!
-</div>
+                        <div>
+                            <span>{this.props.album.category.attributes.term}</span>
+                            <span>Category</span>
+                        </div>
+                        <div>
+                            <span>{this.props.album['im:releaseDate'].attributes.label}</span>
+                            <span>Release date</span>
+                        </div>
+                        <div>
+                            <span>{this.props.album['im:price'].label}</span>
+                            <span>Price</span>
+                        </div>
+                        <div>
+                            <a href={this.props.album.link.attributes.href} target={'_blank'} rel="noopener noreferrer">Check out on iTunes</a>
+                        </div>
+                        <div>
+                            <a href={this.props.album.category.attributes.scheme} target={'_blank'} rel="noopener noreferrer">More artists in this category</a>
+                        </div>
+                    </div>
                 </div>
             </li>
         );
