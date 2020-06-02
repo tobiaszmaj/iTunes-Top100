@@ -6,6 +6,7 @@ import ComingSoon from "../ComingSoon/ComingSoon";
 import TopAlbums from "../TopAlbums/TopAlbums";
 import SideDrawer from "../SideDrawer/SideDrawer";
 import Backdrop from "../Backdrop/Backdrop";
+import NotFound from "../NotFound/NotFound";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faAngleDown, faSearch, faAngleUp, faBars } from '@fortawesome/free-solid-svg-icons';
 import { Provider } from 'react-redux';
@@ -66,6 +67,7 @@ class App extends Component {
                             <Redirect exact from="/" to="/top100" />
                             {comingSoonItems}
                             <Route path={'/top100'} component={TopAlbums} />
+                            <Route component={NotFound} />
                         </Switch>
                     </div>
                 </BrowserRouter>

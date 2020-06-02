@@ -19,12 +19,10 @@ class Navigation extends Component {
             <nav className={'navBar'}>
                 <button className={'navBar__hamburger'} onClick={this.props.drawerClickHandler}><FontAwesomeIcon
                     icon={'bars'} /></button>
-                <div className="navBar__wrapper">
-                    <NavLink onClick={this.scrollUp} className={'navBar__logo'} to={'/top100'}><span
-                        className={'logo__top100'}>Top 100</span><span>albums</span></NavLink>
-                    <div className="navBar__items">
-                        {navButtons}
-                    </div>
+                <NavLink onClick={this.scrollUp} className={'navBar__logo'} to={'/top100'}><span
+                    className={'logo__top100'}>Top 100</span><span>albums</span></NavLink>
+                <div className="navBar__items">
+                    {navButtons}
                 </div>
             </nav>
         );

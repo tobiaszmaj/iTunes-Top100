@@ -5,48 +5,40 @@
     flex-direction: row;
     align-items: center;
     height: 55px;
-    width: 100%;
+    width: 100vw;
     background-color: $navBgColor;
     position: fixed;
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
 
-    .navBar__wrapper {
+    .navBar__logo {
         margin-left: 50px;
-        width: 100%;
+        min-width: 120px;
         display: flex;
-        flex-direction: row;
-        align-items: center;
+        flex-direction: column;
+        color: $navFontColor;
+        padding: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 0.8;
 
-        .navBar__logo {
-            min-width: 120px;
-            display: flex;
-            flex-direction: column;
-            color: $navFontColor;
-            padding: 20px;
+        .logo__top100 {
+            font-size: 18px;
+            letter-spacing: 5px;
+        }
+    }
+
+    .navBar__items {
+        .items__btn {
+            padding: 30px;
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 24px;
-            font-weight: 900;
-            line-height: 0.8;
+            color: $navFontColor;
 
-            .logo__top100 {
-                font-size: 18px;
-                letter-spacing: 5px;
-            }
-        }
-
-        .navBar__items {
-
-            .items__btn {
-                padding: 30px;
-                text-decoration: none;
-                text-transform: uppercase;
-                color: $navFontColor;
-
-                &:hover {
-                    cursor: pointer;
-                    color: $secondaryColor;
-                }
+            &:hover {
+                cursor: pointer;
+                color: $secondaryColor;
             }
         }
     }
@@ -66,15 +58,17 @@
         }
 
         .navBar__logo {
-            margin-left: 0;
+            margin-left: auto;
         }
 
         .items__btn {
             display: none;
         }
+    }
+}
 
-        .navBar__wrapper {
-            margin: 0;
-        }
+@media (max-width: 690px) {
+    .navBar {
+        justify-content: space-between;
     }
 }
