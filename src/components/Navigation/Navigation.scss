@@ -1,12 +1,38 @@
 .navBar {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    height: 55px;
+    background-color: black;
 
     .navButton {
         padding: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #ffffff;
 
         &:hover {
             cursor: pointer;
+            color: dodgerblue;
+        }
+    }
+
+    .logo {
+        min-width: 100px;
+        display: flex;
+        flex-direction: column;
+        color: #ffffff;
+        padding: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 900;
+        margin-left: 50px;
+        line-height: 0.8;
+
+        .logo-top100 {
+            font-size: 18px;
+            letter-spacing: 5px;
         }
     }
 }
