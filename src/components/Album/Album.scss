@@ -110,6 +110,7 @@
         }
 
         .panel-links {
+            visibility: hidden;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -129,6 +130,10 @@
                     }
                 }
 
+            }
+
+            &.is-expanded {
+                visibility: visible;
             }
         }
     }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './TopAlbums.scss';
 import Album from "../Album/Album";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class TopAlbums extends Component {
     constructor(props) {
@@ -8,6 +9,7 @@ class TopAlbums extends Component {
         this.state = {
             data: [],
             search: '',
+            showBtn: false
         }
     }
     //Fetching data
@@ -16,10 +18,28 @@ class TopAlbums extends Component {
             .then(response => response.json())
             .then(response => this.setState({ data: response.feed.entry }));
 
+        window.addEventListener('scroll', this.handleScroll);
     }
     //Handling input value on change
     handleChange = (event) => {
         this.setState({ search: event.target.value })
+    };
+
+    scrollUp = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    handleScroll = () => {
+        if (window.pageYOffset > 200) {
+            this.setState({
+                showBtn: true
+            })
+        }
+        else {
+            this.setState({
+                showBtn: false
+            })
+        }
     };
 
     render() {
@@ -35,12 +55,16 @@ class TopAlbums extends Component {
                 return album['im:name'].label.toLowerCase().includes(this.state.search.toLowerCase()) || album['im:artist'].label.toLowerCase().includes(this.state.search.toLowerCase())
             }
         );
-        console.log(this.state.data);
+        console.log(this.state.yOffset);
         return (
             <main className={'topAlbums'}>
-                <form>
-                    <input type="text" placeholder="Search top albums" value={this.state.search}
+                {this.state.showBtn ? <button className={'scrollUp'} onClick=
+                    {this.scrollUp}><FontAwesomeIcon icon={'angle-up'} />
+                </button> : null}
+                <form className={'searchBox'}>
+                    <input className={'search'} type="text" placeholder=" Search top albums" value={this.state.search}
                         onChange={this.handleChange} />
+                    <FontAwesomeIcon icon={'search'} className={'searchIcon'} />
                 </form>
                 <ul>
                     {filteredAlbums.map((element, index) => {

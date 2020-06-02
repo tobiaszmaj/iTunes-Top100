@@ -50,7 +50,7 @@ class Album extends Component {
                                 <span>Price</span>
                             </div>
                         </div>
-                        <div className={'panel-links'}>
+                        <div className={`panel-links ${this.state.isExpanded ? 'is-expanded' : ''}`}>
                             <div className={'panel-link'}>
                                 <a href={this.props.album.link.attributes.href} target={'_blank'} rel={'noopener noreferrer'}>Check out on
                                     iTunes</a>
