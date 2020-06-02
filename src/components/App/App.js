@@ -6,6 +6,8 @@ import ComingSoon from "../ComingSoon/ComingSoon";
 import TopAlbums from "../TopAlbums/TopAlbums";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faAngleDown, faSearch, faAngleUp } from '@fortawesome/free-solid-svg-icons'
+import { Provider } from 'react-redux';
+import store from '../../store'
 
 library.add(faAngleDown, faSearch, faAngleUp);
 
@@ -24,16 +26,18 @@ class App extends Component {
             return index >= 1 ? <Route path={element.link} component={ComingSoon} key={element.item} /> : null
         });
         return (
-            <BrowserRouter>
-                <div>
-                    <Navigation navItems={navItems} />
-                    <Switch>
-                        <Redirect exact from="/" to="/top100" />
-                        {comingSoonItems}
-                        <Route path={'/top100'} component={TopAlbums} />
-                    </Switch>
-                </div>
-            </BrowserRouter>
+            <Provider store={store}>
+                <BrowserRouter>
+                    <div>
+                        <Navigation navItems={navItems} />
+                        <Switch>
+                            <Redirect exact from="/" to="/top100" />
+                            {comingSoonItems}
+                            <Route path={'/top100'} component={TopAlbums} />
+                        </Switch>
+                    </div>
+                </BrowserRouter>
+            </Provider>
         );
     }
 }

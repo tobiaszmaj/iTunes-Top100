@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './TopAlbums.scss';
 import Album from "../Album/Album";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { connect } from 'react-redux';
+import { fetchAlbums } from "../../actions/albumAction";
 
 class TopAlbums extends Component {
     constructor(props) {
@@ -11,11 +13,8 @@ class TopAlbums extends Component {
             search: ''
         }
     }
-    //Fetching data
-    componentDidMount() {
-        fetch('https://itunes.apple.com/us/rss/topalbums/limit=100/json')
-            .then(response => response.json())
-            .then(response => this.setState({ data: response.feed.entry }));
+    componentWillMount() {
+        this.props.fetchAlbums();
     }
     //Handling input value on change
     handleChange = (event) => {
@@ -23,8 +22,8 @@ class TopAlbums extends Component {
     };
 
     render() {
-        //Adding position of the album to fetched data
-        const albums = this.state.data.map((element, index) => {
+        //Adding rank of the album to fetched data
+        const albums = this.props.albums.map((element, index) => {
             const i = Object.assign({}, element);
             i.position = index + 1;
             return i;
@@ -38,7 +37,8 @@ class TopAlbums extends Component {
         return (
             <main className={'topAlbums'}>
                 <form className={'topAlbums__searchBox'}>
-                    <input className={'searchBox__input'} type="text" placeholder=" Search top albums" value={this.state.search}
+                    <input className={'searchBox__input'} type="text" placeholder=" Search top albums"
+                        value={this.state.search}
                         onChange={this.handleChange} />
                     <FontAwesomeIcon icon={'search'} className={'searchBox__icon'} />
                 </form>
@@ -52,4 +52,8 @@ class TopAlbums extends Component {
     }
 }
 
-export default TopAlbums; 
+const mapStateToProps = state => ({
+    albums: state.albums.items
+});
+
+export default connect(mapStateToProps, { fetchAlbums })(TopAlbums); 
