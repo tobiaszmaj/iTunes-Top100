@@ -35,25 +35,31 @@ class Album extends Component {
                     <FontAwesomeIcon className={'albumArrow'} icon={'angle-down'} />
                 </div>
                 <div className="panel-collapse" style={{ height: currentHeight }}>
-
                     <div className="panel-body" ref="inner">
-                        <div>
-                            <span>{this.props.album.category.attributes.term}</span>
-                            <span>Category</span>
+                        <div className={'panel-mainInfo'}>
+                            <div className={'panel-mainInfo-element'}>
+                                <span>{this.props.album.category.attributes.term}</span>
+                                <span>Category</span>
+                            </div>
+                            <div className={'panel-mainInfo-element'}>
+                                <span>{this.props.album['im:releaseDate'].attributes.label}</span>
+                                <span>Release date</span>
+                            </div>
+                            <div className={'panel-mainInfo-element'}>
+                                <span>{this.props.album['im:price'].label}</span>
+                                <span>Price</span>
+                            </div>
                         </div>
-                        <div>
-                            <span>{this.props.album['im:releaseDate'].attributes.label}</span>
-                            <span>Release date</span>
-                        </div>
-                        <div>
-                            <span>{this.props.album['im:price'].label}</span>
-                            <span>Price</span>
-                        </div>
-                        <div>
-                            <a href={this.props.album.link.attributes.href} target={'_blank'} rel="noopener noreferrer">Check out on iTunes</a>
-                        </div>
-                        <div>
-                            <a href={this.props.album.category.attributes.scheme} target={'_blank'} rel="noopener noreferrer">More artists in this category</a>
+                        <div className={'panel-links'}>
+                            <div className={'panel-link'}>
+                                <a href={this.props.album.link.attributes.href} target={'_blank'} rel={'noopener noreferrer'}>Check out on
+                                    iTunes</a>
+                            </div>
+                            <div className={'panel-link'}>
+                                <a href={this.props.album.category.attributes.scheme} target={'_blank'} rel={'noopener noreferrer'}>More artists in
+                                this
+                                    category</a>
+                            </div>
                         </div>
                     </div>
                 </div>

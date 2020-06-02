@@ -10,7 +10,7 @@
     margin-bottom: 5px;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid #E4E5E9;
+    border: 1px solid #f0f1f5;
     border-radius: 3px;
     font-family: 'Montserrat', sans-serif;
 
@@ -73,5 +73,59 @@
     .panel-collapse {
         overflow: hidden;
         transition: height 0.3s ease-out;
+
+        .panel-mainInfo {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 80px;
+            border-top: #f0f1f5 solid 1px;
+            background-image: linear-gradient(to bottom, #e4e5e9, #ebebee, #f2f2f4, #f8f8f9, #ffffff, #ffffff, #ffffff, #ffffff);
+
+            .panel-mainInfo-element {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                //border-right: 1px solid #f0f1f5;
+                &:last-child {
+                    padding: 0;
+                    border-right: none;
+                }
+
+                & span:first-child {
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+
+                & span:last-child {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .panel-links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            height: 80px;
+            border-top: #f0f1f5 solid 1px;
+
+            .panel-link {
+
+                a {
+                    text-decoration: none;
+                    color: #000000;
+                    padding: 20px;
+
+                    &:hover {
+                        color: #1E90FF;
+                    }
+                }
+
+            }
+        }
     }
 }
