@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+$fontFamily: 'Montserrat',
+sans-serif;
+
+@mixin bgGradient {
+    background-image: linear-gradient(to left top, #aeafb0, #bfbfc0, #cfcfd0, #e0e0e0, #f1f1f1);
+}
+
+
+$border: 1px solid #aeafb0;
+
+
+// Navigation
+$navBgColor: #000000;
+$navFontColor: #FFFFFF;
+$secondaryColor: #1E90FF;
+
+// TopAlbums
+$searchBoxBgColor: #FFFFFF;
+$searchIconColor: #aeafb0;
+
+//Album
+$panelBgColor: #FFFFFF;
+$borderPanelMainInfo: 1px solid #f0f1f5;
+$panelMainInfoGradient: linear-gradient(to bottom, #e4e5e9, #ebebee, #f2f2f4, #f8f8f9, #ffffff, #ffffff, #ffffff, #ffffff);
+$borderPanelLinks: #f0f1f5 solid 1px;

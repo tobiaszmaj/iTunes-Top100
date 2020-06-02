@@ -25,37 +25,37 @@ class Album extends Component {
 
         return (
             <li className={`panel ${this.state.isExpanded ? 'is-expanded' : ''}`}>
-                <div className="panel-header" onClick={(e) => this.handleToggle(e)}>
-                    <span className={'albumPosition'}>{this.props.album.position}</span>
-                    <img className={'albumImg'} src={this.props.album['im:image'][2].label} alt="" />
-                    <div className="albumData">
-                        <h2 className={'albumName'}>{this.props.album['im:name'].label}</h2>
-                        <h3 className={'albumArtist'}>{this.props.album['im:artist'].label}</h3>
+                <div className="panel__header" onClick={(e) => this.handleToggle(e)}>
+                    <span className={'header__rank'}>{this.props.album.position}</span>
+                    <img className={'header__img'} src={this.props.album['im:image'][2].label} alt="" />
+                    <div className="header__album">
+                        <h2 className={'album__name'}>{this.props.album['im:name'].label}</h2>
+                        <h3 className={'album__artist'}>{this.props.album['im:artist'].label}</h3>
                     </div>
-                    <FontAwesomeIcon className={'albumArrow'} icon={'angle-down'} />
+                    <FontAwesomeIcon className={'header__arrow'} icon={'angle-down'} />
                 </div>
-                <div className="panel-collapse" style={{ height: currentHeight }}>
-                    <div className="panel-body" ref="inner">
-                        <div className={'panel-mainInfo'}>
-                            <div className={'panel-mainInfo-element'}>
-                                <span>{this.props.album.category.attributes.term}</span>
-                                <span>Category</span>
+                <div className="panel__collapse" style={{ height: currentHeight }}>
+                    <div className="collapse__body" ref="inner">
+                        <div className={'body__info'}>
+                            <div className={'info__element'}>
+                                <span className={'element__data'}>{this.props.album.category.attributes.term}</span>
+                                <span className={'element__title'}>Category</span>
                             </div>
-                            <div className={'panel-mainInfo-element'}>
-                                <span>{this.props.album['im:releaseDate'].attributes.label}</span>
-                                <span>Release date</span>
+                            <div className={'info__element'}>
+                                <span className={'element__data'}>{this.props.album['im:releaseDate'].attributes.label}</span>
+                                <span className={'element__title'}>Release date</span>
                             </div>
-                            <div className={'panel-mainInfo-element'}>
-                                <span>{this.props.album['im:price'].label}</span>
-                                <span>Price</span>
+                            <div className={'info__element'}>
+                                <span className={'element__data'}>{this.props.album['im:price'].label}</span>
+                                <span className={'element__title'}>Price</span>
                             </div>
                         </div>
-                        <div className={`panel-links ${this.state.isExpanded ? 'is-expanded' : ''}`}>
-                            <div className={'panel-link'}>
+                        <div className={`body__links ${this.state.isExpanded ? 'is-expanded' : ''}`}>
+                            <div className={'links__link'}>
                                 <a href={this.props.album.link.attributes.href} target={'_blank'} rel={'noopener noreferrer'}>Check out on
                                     iTunes</a>
                             </div>
-                            <div className={'panel-link'}>
+                            <div className={'links__link'}>
                                 <a href={this.props.album.category.attributes.scheme} target={'_blank'} rel={'noopener noreferrer'}>More artists in
                                 this
                                     category</a>
