@@ -1,4 +1,4 @@
-# Personal website2
+# iTunes Top 100
 
 ### See [DEMO](https://tobiaszmaj.github.io/iTunes-Top100/)
 
