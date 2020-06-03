@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 55px;
+    height: 70px;
     width: 100vw;
     background-color: $navBgColor;
     position: fixed;
@@ -14,18 +14,22 @@
         margin-left: 50px;
         min-width: 120px;
         display: flex;
-        flex-direction: column;
+        align-items: center;
         color: $navFontColor;
         padding: 20px;
         text-decoration: none;
-        text-transform: uppercase;
         font-size: 24px;
-        font-weight: 900;
+        font-weight: 700;
         line-height: 0.8;
 
         .logo__top100 {
             font-size: 18px;
             letter-spacing: 5px;
+
+            img {
+                width: 40px;
+                margin-right: 5px;
+            }
         }
     }
 
@@ -50,6 +54,7 @@
         background: transparent;
         border: none;
         display: none;
+        cursor: pointer;
     }
 
     @media (max-width: 690px) {

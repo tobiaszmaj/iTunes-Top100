@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 html {
     height: 100%;
@@ -9,7 +9,7 @@ body {
 }
 
 
-$fontFamily: 'Montserrat',
+$fontFamily: 'Nunito',
 sans-serif;
 
 @mixin bgGradient {
@@ -21,7 +21,7 @@ $border: 1px solid #aeafb0;
 
 
 // Navigation
-$navBgColor: #000000;
+$navBgColor: #7229E6;
 $navFontColor: #FFFFFF;
 $secondaryColor: #1E90FF;
 

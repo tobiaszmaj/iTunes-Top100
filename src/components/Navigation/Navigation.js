@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './Navigation.scss';
 import { NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import LogoIcon from "./music-album.svg";
 
 class Navigation extends Component {
 
@@ -19,8 +20,15 @@ class Navigation extends Component {
             <nav className={'navBar'}>
                 <button className={'navBar__hamburger'} onClick={this.props.drawerClickHandler}><FontAwesomeIcon
                     icon={'bars'} /></button>
-                <NavLink onClick={this.scrollUp} className={'navBar__logo'} to={'/top100'}><span
-                    className={'logo__top100'}>Top 100</span><span>albums</span></NavLink>
+                <NavLink onClick={this.scrollUp} className={'navBar__logo'} to={'/top100'}>
+                    <span
+                        className={'logo__top100'}>
+                        <img src={LogoIcon} alt="Logo" />
+                    </span>
+                    <span>
+                        Top100
+                            </span>
+                </NavLink>
                 <div className="navBar__items">
                     {navButtons}
                 </div>
