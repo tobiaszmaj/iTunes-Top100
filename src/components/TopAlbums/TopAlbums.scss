@@ -6,6 +6,7 @@
     align-items: center;
     min-height: 100vh;
     @include bgGradient;
+    color: white;
 
     .topAlbums__searchBox {
         display: flex;
@@ -13,10 +14,14 @@
         justify-content: center;
         align-items: center;
         height: 40px;
-        margin-top: 50px;
+        margin-top: 70px;
         border: $border;
         border-radius: 3px;
         background: $searchBoxBgColor;
+        font-family: $fontFamily;
+        border: none;
+        border: solid 1px #ccc;
+        border-radius: 10px;
 
         .searchBox__input {
             font-size: 20px;
@@ -24,13 +29,17 @@
             background: #ffffff;
             border: none;
             border-radius: 2px;
+            padding-left: 10px;
+            border: none;
+            border: solid 1px #ccc;
+            border-radius: 10px;
         }
 
         .searchBox__icon {
             border-radius: 2px;
-            height: 30px;
+            height: 20px;
             color: $searchIconColor;
-            width: 40px;
+            width: 30px;
         }
     }
 

@@ -13,7 +13,8 @@ $fontFamily: 'Nunito',
 sans-serif;
 
 @mixin bgGradient {
-    background-image: linear-gradient(to left top, #aeafb0, #bfbfc0, #cfcfd0, #e0e0e0, #f1f1f1);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
+    background-blend-mode: multiply, multiply;
 }
 
 
@@ -22,15 +23,19 @@ $border: 1px solid #aeafb0;
 
 // Navigation
 $navBgColor: #7229E6;
-$navFontColor: #FFFFFF;
-$secondaryColor: #1E90FF;
+$navFontColor: #fff;
+$secondaryColor: #fff;
 
 // TopAlbums
-$searchBoxBgColor: #FFFFFF;
-$searchIconColor: #aeafb0;
+$searchBoxBgColor: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%),
+radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
+$searchIconColor: #fff;
 
 //Album
-$panelBgColor: #FFFFFF;
+$panelBgColor: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%),
+radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
 $borderPanelMainInfo: 1px solid #f0f1f5;
-$panelMainInfoGradient: linear-gradient(to bottom, #e4e5e9, #ebebee, #f2f2f4, #f8f8f9, #ffffff, #ffffff, #ffffff, #ffffff);
+$panelMainInfoGradient: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
 $borderPanelLinks: #f0f1f5 solid 1px;
+
+// background-image: linear-gradient(to right, #434343 0%, black 100%);

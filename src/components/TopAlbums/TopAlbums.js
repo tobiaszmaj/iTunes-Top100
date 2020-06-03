@@ -36,7 +36,7 @@ class TopAlbums extends Component {
         return (
             <main className={'topAlbums'}>
                 <form className={'topAlbums__searchBox'}>
-                    <input className={'searchBox__input'} type="text" placeholder=" Search top albums"
+                    <input className={'searchBox__input'} type="text" placeholder="Search"
                         value={this.state.search}
                         onChange={this.handleChange} />
                     <FontAwesomeIcon icon={'search'} className={'searchBox__icon'} />
