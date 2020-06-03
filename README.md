@@ -1,6 +1,6 @@
 # Personal website2
 
-### See [DEMO](https://tobiaszmaj.github.io/itunes-top100/)
+### See [DEMO](https://tobiaszmaj.github.io/iTunes-Top100/)
 
 ![Preview](preview.jpg)
 
