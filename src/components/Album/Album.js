@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Album.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import iTunesIcon from "./itunes.svg";
 
 class Album extends Component {
     constructor(props) {
@@ -26,7 +27,7 @@ class Album extends Component {
         return (
             <li className={`panel ${this.state.isExpanded ? 'is-expanded' : ''}`}>
                 <div className="panel__header" onClick={(e) => this.handleToggle(e)}>
-                    <span className={'header__rank'}>{this.props.album.position}</span>
+                    <span className={'header__rank'}>#{this.props.album.position}</span>
                     <img className={'header__img'} src={this.props.album['im:image'][2].label} alt="" />
                     <div className="header__album">
                         <h2 className={'album__name'}>{this.props.album['im:name'].label}</h2>
@@ -53,7 +54,7 @@ class Album extends Component {
                         <div className={`body__links ${this.state.isExpanded ? 'is-expanded' : ''}`}>
                             <div className={'links__link'}>
                                 <a className={'links__link--a'} href={this.props.album.link.attributes.href} target={'_blank'} rel={'noopener noreferrer'}>Check out on
-                                    iTunes</a>
+                                    iTunes<img src={iTunesIcon} alt="iTunes Icon" /></a>
                             </div>
                             <div className={'links__link'}>
                                 <a className={'links__link--a'} href={this.props.album.category.attributes.scheme} target={'_blank'} rel={'noopener noreferrer'}>More artists in
