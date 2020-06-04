@@ -37,6 +37,7 @@ class App extends Component {
 
     render() {
         const navItems = [];
+        //Adding route path to ComingSoon element to future tabs
         const comingSoonItems = navItems.map((element, index) => {
             return index >= 1 ? <Route path={element.link} key={index} /> : null
         });
@@ -55,9 +56,9 @@ class App extends Component {
                         <SideDrawer navItems={navItems} show={this.state.sideDrawerOpen} />;
                         {backdrop}
                         <Switch>
-                            <Redirect exact from="/" to="/iTunes-Top100" />
+                            <Redirect exact from="/" to="/top100" />
                             {comingSoonItems}
-                            <Route path={'iTunes-Top100'} component={TopAlbums} />
+                            <Route path={'/top100'} component={TopAlbums} />
                             <Route component={NotFound} />
                         </Switch>
                     </div>
