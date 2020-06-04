@@ -49,15 +49,15 @@ class App extends Component {
 
         return (
             <Provider store={store}>
-                <BrowserRouter>
+                <BrowserRouter basename="iTunes-Top100">
                     <div style={{ height: '100%' }}>
                         <Navigation navItems={navItems} drawerClickHandler={this.drawerToggleClickHandler} />
                         <SideDrawer navItems={navItems} show={this.state.sideDrawerOpen} />;
                         {backdrop}
                         <Switch>
-                            <Redirect exact from="/" to="/iTunes-Top100" />
+                            <Redirect exact from="/" to="/top100" />
                             {comingSoonItems}
-                            <Route path={'iTunes-Top100'} component={TopAlbums} />
+                            <Route exact path='/' component={TopAlbums} />
                             <Route component={NotFound} />
                         </Switch>
                     </div>
