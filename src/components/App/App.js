@@ -49,7 +49,7 @@ class App extends Component {
 
         return (
             <Provider store={store}>
-                <BrowserRouter basename={`${process.env.PUBLIC_URL}/`}>
+                <BrowserRouter basename="iTunes-Top100">
                     <div style={{ height: '100%' }}>
                         <Navigation navItems={navItems} drawerClickHandler={this.drawerToggleClickHandler} />
                         <SideDrawer navItems={navItems} show={this.state.sideDrawerOpen} />;
