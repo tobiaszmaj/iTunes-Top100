@@ -49,7 +49,7 @@ class App extends Component {
 
         return (
             <Provider store={store}>
-                <BrowserRouter>
+                <BrowserRouter basename={`${process.env.PUBLIC_URL}/`}>
                     <div style={{ height: '100%' }}>
                         <Navigation navItems={navItems} drawerClickHandler={this.drawerToggleClickHandler} />
                         <SideDrawer navItems={navItems} show={this.state.sideDrawerOpen} />;
@@ -57,7 +57,7 @@ class App extends Component {
                         <Switch>
                             <Redirect exact from="/" to="/top100" />
                             {comingSoonItems}
-                            <Route path={process.env.PUBLIC_URL + '/'} component={TopAlbums} />
+                            <Route exact path='/' component={TopAlbums} />
                             <Route component={NotFound} />
                         </Switch>
                     </div>
