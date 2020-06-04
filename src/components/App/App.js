@@ -37,6 +37,7 @@ class App extends Component {
 
     render() {
         const navItems = [];
+        //Adding route path to ComingSoon element to future tabs
         const comingSoonItems = navItems.map((element, index) => {
             return index >= 1 ? <Route path={element.link} key={index} /> : null
         });
@@ -57,7 +58,7 @@ class App extends Component {
                         <Switch>
                             <Redirect exact from="/" to="/top100" />
                             {comingSoonItems}
-                            <Route path={process.env.PUBLIC_URL + '/'} component={TopAlbums} />
+                            <Route path={'/top100'} component={TopAlbums} />
                             <Route component={NotFound} />
                         </Switch>
                     </div>
