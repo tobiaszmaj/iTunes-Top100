@@ -1,24 +1,23 @@
 {
   "files": {
-    "main.css": "/iTunes-Top100/static/css/main.59f69016.chunk.css",
-    "main.js": "/iTunes-Top100/static/js/main.66b85b22.chunk.js",
-    "main.js.map": "/iTunes-Top100/static/js/main.66b85b22.chunk.js.map",
+    "main.css": "/iTunes-Top100/static/css/main.af180b58.chunk.css",
+    "main.js": "/iTunes-Top100/static/js/main.e6622682.chunk.js",
+    "main.js.map": "/iTunes-Top100/static/js/main.e6622682.chunk.js.map",
     "runtime-main.js": "/iTunes-Top100/static/js/runtime-main.2b2bbdec.js",
     "runtime-main.js.map": "/iTunes-Top100/static/js/runtime-main.2b2bbdec.js.map",
-    "static/js/2.ced5a4d3.chunk.js": "/iTunes-Top100/static/js/2.ced5a4d3.chunk.js",
-    "static/js/2.ced5a4d3.chunk.js.map": "/iTunes-Top100/static/js/2.ced5a4d3.chunk.js.map",
+    "static/js/2.cad18887.chunk.js": "/iTunes-Top100/static/js/2.cad18887.chunk.js",
+    "static/js/2.cad18887.chunk.js.map": "/iTunes-Top100/static/js/2.cad18887.chunk.js.map",
     "index.html": "/iTunes-Top100/index.html",
-    "precache-manifest.edb4914e4c4a191b6ea7225eb8b9afcf.js": "/iTunes-Top100/precache-manifest.edb4914e4c4a191b6ea7225eb8b9afcf.js",
+    "precache-manifest.3c195d30efa20e841e136b624db4ea27.js": "/iTunes-Top100/precache-manifest.3c195d30efa20e841e136b624db4ea27.js",
     "service-worker.js": "/iTunes-Top100/service-worker.js",
-    "static/css/main.59f69016.chunk.css.map": "/iTunes-Top100/static/css/main.59f69016.chunk.css.map",
-    "static/js/2.ced5a4d3.chunk.js.LICENSE.txt": "/iTunes-Top100/static/js/2.ced5a4d3.chunk.js.LICENSE.txt",
-    "static/media/itunes.svg": "/iTunes-Top100/static/media/itunes.bd69b437.svg",
+    "static/css/main.af180b58.chunk.css.map": "/iTunes-Top100/static/css/main.af180b58.chunk.css.map",
+    "static/js/2.cad18887.chunk.js.LICENSE.txt": "/iTunes-Top100/static/js/2.cad18887.chunk.js.LICENSE.txt",
     "static/media/music-album.svg": "/iTunes-Top100/static/media/music-album.d08f0f57.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.2b2bbdec.js",
-    "static/js/2.ced5a4d3.chunk.js",
-    "static/css/main.59f69016.chunk.css",
-    "static/js/main.66b85b22.chunk.js"
+    "static/js/2.cad18887.chunk.js",
+    "static/css/main.af180b58.chunk.css",
+    "static/js/main.e6622682.chunk.js"
   ]
 }
