@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/iTunes-Top100/static/css/main.59f69016.chunk.css",
-    "main.js": "/iTunes-Top100/static/js/main.060fdbf2.chunk.js",
-    "main.js.map": "/iTunes-Top100/static/js/main.060fdbf2.chunk.js.map",
-    "runtime-main.js": "/iTunes-Top100/static/js/runtime-main.2b2bbdec.js",
-    "runtime-main.js.map": "/iTunes-Top100/static/js/runtime-main.2b2bbdec.js.map",
-    "static/js/2.ced5a4d3.chunk.js": "/iTunes-Top100/static/js/2.ced5a4d3.chunk.js",
-    "static/js/2.ced5a4d3.chunk.js.map": "/iTunes-Top100/static/js/2.ced5a4d3.chunk.js.map",
-    "index.html": "/iTunes-Top100/index.html",
-    "precache-manifest.8d0308e67b767789e6a5d5e3f02d5262.js": "/iTunes-Top100/precache-manifest.8d0308e67b767789e6a5d5e3f02d5262.js",
-    "service-worker.js": "/iTunes-Top100/service-worker.js",
-    "static/css/main.59f69016.chunk.css.map": "/iTunes-Top100/static/css/main.59f69016.chunk.css.map",
-    "static/js/2.ced5a4d3.chunk.js.LICENSE.txt": "/iTunes-Top100/static/js/2.ced5a4d3.chunk.js.LICENSE.txt",
-    "static/media/itunes.svg": "/iTunes-Top100/static/media/itunes.bd69b437.svg",
-    "static/media/music-album.svg": "/iTunes-Top100/static/media/music-album.d08f0f57.svg"
+    "main.css": "/top100/static/css/main.59f69016.chunk.css",
+    "main.js": "/top100/static/js/main.5afc907b.chunk.js",
+    "main.js.map": "/top100/static/js/main.5afc907b.chunk.js.map",
+    "runtime-main.js": "/top100/static/js/runtime-main.0e94f76d.js",
+    "runtime-main.js.map": "/top100/static/js/runtime-main.0e94f76d.js.map",
+    "static/js/2.ced5a4d3.chunk.js": "/top100/static/js/2.ced5a4d3.chunk.js",
+    "static/js/2.ced5a4d3.chunk.js.map": "/top100/static/js/2.ced5a4d3.chunk.js.map",
+    "index.html": "/top100/index.html",
+    "precache-manifest.4fab9f25fafba5832ee21f35ab474587.js": "/top100/precache-manifest.4fab9f25fafba5832ee21f35ab474587.js",
+    "service-worker.js": "/top100/service-worker.js",
+    "static/css/main.59f69016.chunk.css.map": "/top100/static/css/main.59f69016.chunk.css.map",
+    "static/js/2.ced5a4d3.chunk.js.LICENSE.txt": "/top100/static/js/2.ced5a4d3.chunk.js.LICENSE.txt",
+    "static/media/itunes.svg": "/top100/static/media/itunes.bd69b437.svg",
+    "static/media/music-album.svg": "/top100/static/media/music-album.d08f0f57.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2b2bbdec.js",
+    "static/js/runtime-main.0e94f76d.js",
     "static/js/2.ced5a4d3.chunk.js",
     "static/css/main.59f69016.chunk.css",
-    "static/js/main.060fdbf2.chunk.js"
+    "static/js/main.5afc907b.chunk.js"
   ]
 }
