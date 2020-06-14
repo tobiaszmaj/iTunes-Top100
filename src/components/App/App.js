@@ -52,8 +52,8 @@ class App extends Component {
                         <SideDrawer navItems={navItems} show={this.state.sideDrawerOpen} />;
                         {backdrop}
                         <Switch>
-                            <Redirect exact from="/" to="iTunes-Top100" />
-                            <Route path={'iTunes-Top100'} component={TopAlbums} />
+                            <Redirect exact from="/" to="/iTunes-Top100" />
+                            <Route path={'/iTunes-Top100'} component={TopAlbums} />
                             <Route component={NotFound} />
                         </Switch>
                     </div>
