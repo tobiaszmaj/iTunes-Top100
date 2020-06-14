@@ -142,17 +142,12 @@
 
                 .links__link--a {
                     text-decoration: none;
-                    color: #000000;
+                    color: #fff;
                     display: flex;
                     align-items: center;
 
-                    img {
-                        width: 20px;
-                        padding-left: 5px;
-                    }
-
                     &:hover {
-                        color: $secondaryColor;
+                        color: #2575fc;
                     }
                 }
 
