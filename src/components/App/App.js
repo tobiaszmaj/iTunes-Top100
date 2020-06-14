@@ -4,12 +4,12 @@ import { BrowserRouter, Redirect, Switch, Route } from "react-router-dom";
 import Navigation from "../Navigation/Navigation";
 import TopAlbums from "../TopAlbums/TopAlbums";
 import SideDrawer from "../SideDrawer/SideDrawer";
-import Backdrop from "../Backdrop/Backdrop";
-import NotFound from "../NotFound/NotFound";
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faAngleDown, faSearch, faAngleUp, faBars } from '@fortawesome/free-solid-svg-icons';
+import Backdrop from "../Backdrop/Backdrop"
+import NotFound from "../NotFound/NotFound"
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faAngleDown, faSearch, faAngleUp, faBars } from '@fortawesome/free-solid-svg-icons'
 import { Provider } from 'react-redux';
-import store from '../../store';
+import store from '../../store'
 
 library.add(faAngleDown, faSearch, faAngleUp, faBars);
 
@@ -36,18 +36,14 @@ class App extends Component {
     };
 
     render() {
+        //Array with navigation elements
         const navItems = [];
-        //Adding route path to ComingSoon element to future tabs
-        const comingSoonItems = navItems.map((element, index) => {
-            return index >= 1 ? <Route path={element.link} key={index} /> : null
-        });
 
         let backdrop;
 
         if (this.state.sideDrawerOpen) {
             backdrop = <Backdrop click={this.backdropClickHandler} />;
         }
-
         return (
             <Provider store={store}>
                 <BrowserRouter>
@@ -57,7 +53,6 @@ class App extends Component {
                         {backdrop}
                         <Switch>
                             <Redirect exact from="/" to="/top100" />
-                            {comingSoonItems}
                             <Route path={'/top100'} component={TopAlbums} />
                             <Route component={NotFound} />
                         </Switch>

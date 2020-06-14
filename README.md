@@ -1,6 +1,6 @@
 # iTunes Top 100
 
-### See [DEMO](https://tobiaszmaj.github.io/iTunes-Top100/)
+### See [DEMO](https://tobiaszmaj.github.io/top100/)
 
 ![Preview](preview.jpg)
 
