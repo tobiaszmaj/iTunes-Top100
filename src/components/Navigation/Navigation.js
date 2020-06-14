@@ -20,7 +20,7 @@ class Navigation extends Component {
             <nav className={'navBar'}>
                 <button className={'navBar__hamburger'} onClick={this.props.drawerClickHandler}><FontAwesomeIcon
                     icon={'bars'} /></button>
-                <NavLink onClick={this.scrollUp} className={'navBar__logo'} to={'/top100'}>
+                <NavLink onClick={this.scrollUp} className={'navBar__logo'} to={'/iTunes-Top100/'}>
                     <span
                         className={'logo__top100'}>
                         <img src={LogoIcon} alt="Logo" />
